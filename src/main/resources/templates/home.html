@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html  th:replace="~{layout/masterLayout:: layout(~{::main})}" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main role="main">
+
+
+
+    <div class="container mt-5 p-5 bg-light">
+        <h3>Spring  Security Home page</h3>
+        <div th:replace="fragment/account-list.html :: accountList"></div>
+    </div>
+
+
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<table th:fragment="employeeTable" class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th>Id</th>
+    <th>firstName</th>
+    <th>lastName</th>
+    <th>phoneNumber</th>
+    <th>Address</th>
+    <th>cubicleNo</th>
+    <th>Action</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="emp : ${employees}">
+    <td th:text="${emp.id}"></td>
+    <td th:text="${emp.firstName}"></td>
+    <td th:text="${emp.lastName}"></td>
+    <td th:text="${emp.phoneNumber}"></td>
+    <td th:text="${emp.address}"></td>
+    <td th:text="${emp.cubicleNo}"></td>
+    <td><a th:href="@{'/employees/employees/delete?id=' +${emp.id}}" class="btn btn-outline-danger">Delete</a></td>
+  </tr>
+  </tbody>
+
+
+</table>
+</body>
+</html>

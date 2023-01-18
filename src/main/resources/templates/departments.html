@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/masterLayout:: layout(~{::main})}"  xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="container mt-5 p-5">
+    <div class="rol">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Department Tables</h3>
+          </div>
+          <div class="card-body">
+            <div th:replace="fragment/department-table.html :: departmentTable">
+            </div>
+          </div>
+
+        </div>
+        <a th:href="@{/departments/department-form}" class="btn btn-primary my-5">Create Departments</a>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
